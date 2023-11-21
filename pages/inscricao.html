@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link type="text/css" rel="stylesheet" href="../css/inscricao.css">
+    <link type="text/css" rel="stylesheet" href="../icons/fontawesome-free-5.9.0-web/css/all.css">
+    <link type="image/jpg" rel="icon" href="../images/Logo 1 ESAJ.png">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>   
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <title> ESAJ - Inscrições Externas </title>
+</head>
+<body>
+
+    <div class="progress-div">
+        <div class="complete-progress"></div>
+    </div>
+
+    <div class="back-button" onclick="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        <p> voltar </p>
+    </div>
+
+    <div>
+        <h1> Formulário de Pré-Inscrição </h1>
+        <p> A inscrição permanecerá disponível até
+            <span> data </span>. <br>
+            <span> </span>
+            <span> </span>
+            <span> </span>
+            <span> </span>
+        </p>
+
+        <form action="./confirmacao_inscricao.html">
+            <div class="first-section section">
+                <div class="input-container">
+                    <label> CPF: </label>
+                    <input id="CPF" type="text" placeholder="000.000.000-00" maxlength="15" onkeyup="validateInput()">
+                </div>
+
+                <div class="error-text">
+                    <ion-icon name="alert-circle-outline"></ion-icon>
+                    <p> Este campo é obrigatório! </p>
+                </div>
+
+                <div class="input-container">
+                    <label> Nome completo: </label>
+                    <input type="text" placeholder="Digite seu nome completo" onkeyup="validateInput()">
+                </div>
+
+                <div class="error-text">
+                    <ion-icon name="alert-circle-outline"></ion-icon>
+                    <p> Este campo é obrigatório! </p>
+                </div>
+            </div>
+            <div class="second-section section">
+                <div class="input-container">
+                    <label> Nascimento: </label>
+                    <input type="text" id="DATE" placeholder="00/00/0000" onkeypress="validateInput()">
+                </div>
+
+                <div class="error-text">
+                    <ion-icon name="alert-circle-outline"></ion-icon>
+                    <p> Este campo é obrigatório! </p>
+                </div>
+
+                <div class="input-container">
+                    <label> Telefone: </label>
+                    <input type="telefone" id="PHONE" placeholder="(00) 90000-0000" onkeyup="validateInput()">
+                </div>
+
+                <div class="error-text">
+                    <ion-icon name="alert-circle-outline"></ion-icon>
+                    <p> Este campo é obrigatório! </p>
+                </div>
+            </div>
+            <div class="third-section section">
+                <div class="input-container">
+                    <label> E-mail: </label>
+                    <input type="e-mail" placeholder="Digite seu e-mail" onkeyup="validateInput()">
+                </div>
+
+                <div class="error-text">
+                    <ion-icon name="alert-circle-outline"></ion-icon>
+                    <p> Este campo é obrigatório! </p>
+                </div>
+
+                <div class="input-container">
+                    <label> Confirmar e-mail: </label>
+                    <input type="e-mail" placeholder="Confirme seu e-mail" onkeyup="validateInput()">
+                </div>
+
+                <div class="error-text">
+                    <ion-icon name="alert-circle-outline"></ion-icon>
+                    <p> Este campo é obrigatório! </p>
+                </div>
+
+                <div class="input-container">
+                    <label class="captcha">
+                        <p> 954732 </p>
+                    </label>
+                    <input type="text" placeholder="Digite o captcha" onkeyup="validateInput()">
+                </div>
+
+                <div class="error-text">
+                    <ion-icon name="alert-circle-outline"></ion-icon>
+                    <p> Este campo é obrigatório! </p>
+                </div>
+            </div>
+
+            <input type="button" onclick="progressSections()" value="AVANÇAR"> 
+        </form>
+    </div>
+
+    <footer>
+        <img src="../images/Logo 1 ESAJ.png"
+        onclick="window.location.href = 'https://esaj.tjrj.jus.br/'" >
+
+        <div>
+
+            <p> 
+                <span> ESAJ-SEINF </span> <br> 
+                (Serviço de Informação, Inscrição e Frequência) 
+            </p>
+
+            <div class="vl"></div>
+
+            <div>
+                <p> Contato: </p>
+                <p> <i class="fa fa-phone"></i> (21) 3133-2103 </p>
+                <p onclick="window.location.href='mailto:dides.seinf@tjrj.jus.br'"> 
+                    <i class="fa fa-envelope"></i> dides.seinf@tjrj.jus.br 
+                </p>
+            </div>
+        </div>
+
+        
+    </footer>
+
+    <script src="../js/inscricao.js"></script>
+    
+</body>
+</html>
